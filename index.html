@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #24201c;
+  --color-text: #e0d4be;
+  --color-navbar-bg: #2a2520;
+  --color-bg-chat-view: #24201c;
+  --color-bg-secondary: #2a2520;
+  --color-bg-tertiary: #38322c;
+  --color-bg-hover: #433c35;
+  --color-surface: #38322c;
+  --color-surface-hover: #433c35;
+  --color-surface-active: #4e463e;
+  --color-border: #504840;
+  --color-border-light: #a08c7333;
+  --color-border-strong: #5c524a;
+  --color-primary: #c48a4a;
+  --color-primary-dark: #a06e35;
+  --color-primary-light: #d4a060;
+  --color-primary-bg: #c48a4a14;
+  --color-primary-hover-border: #d4a060;
+  --color-nav-icon-active: #c48a4a;
+  --color-nav-hover-border: #c48a4a;
+  --color-primary-alpha-3: color-mix(in srgb, #c48a4a 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #c48a4a 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #c48a4a 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #c48a4a 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #c48a4a 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #c48a4a 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #c48a4a 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #c48a4a 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #c48a4a 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #c48a4a 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #c48a4a 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #c48a4a 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #c48a4a 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #c48a4a 40%, transparent);
+  --color-sidebar-hover: #c48a4a14;
+  --block-hover-outline: 1px dashed color-mix(in srgb, #c48a4a 50%, transparent);
+  --block-selected-outline: 1px solid #d4a060;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #c48a4a 40%, transparent);
+  --color-accent: #c48a4a;
+  --color-accent-foreground: #d4a060;
+  --color-accent-dark: #a06e35;
+  --color-accent-light: #c48a4a14;
+  --color-accent-inverse: #f7f0e0;
+  --color-link: #d4a060;
+  --color-primary-gradient-end: #c48a4a0f;
+  --color-primary-bg-solid: #38322c;
+  --color-user-bubble: #38322c;
+  --color-user-bubble-text: #e0d4be;
+  --color-text-secondary: #bfb09a;
+  --color-text-tertiary: #9a8a78;
+  --color-text-muted: #7d6e5e;
+  --color-text-on-primary: #f7f0e0;
+  --color-success: #8a9a30;
+  --color-success-dark: #6a7820;
+  --color-success-light: #eaf0d0;
+  --color-success-hover: #7a8828;
+  --color-success-bg: #323628;
+  --color-success-border: #3e4428;
+  --color-success-foreground: #8a9a30;
+  --color-success-dark-foreground: #6a7820;
+  --color-success-text: #8a9a30;
+  --color-error: #d45040;
+  --color-error-dark: #a83a2e;
+  --color-error-light: #fce4df;
+  --color-error-hover: #3e2a26;
+  --color-error-bg: #3e2a26;
+  --color-error-border: #52302a;
+  --color-error-active-border: #d45040;
+  --color-error-foreground: #d45040;
+  --color-error-dark-foreground: #a83a2e;
+  --color-error-inverse: #f7f0e0;
+  --color-error-text: #d45040;
+  --color-warning: #c49030;
+  --color-warning-dark: #a07520;
+  --color-warning-light: #f8edc5;
+  --color-warning-hover: #aa7e28;
+  --color-warning-bg: #3e3428;
+  --color-warning-border: #524228;
+  --color-warning-foreground: #c49030;
+  --color-warning-dark-foreground: #8a6518;
+  --color-warning-inverse: #8a6518;
+  --color-surface-warning: #f8edc5;
+  --color-text-warning: #8a6518;
+  --color-info: #6a90a8;
+  --color-info-dark: #4a7088;
+  --color-info-light: #dce9f0;
+  --color-info-hover: #5a8098;
+  --color-info-bg: #2e3438;
+  --color-info-border: #344048;
+  --color-info-foreground: #6a90a8;
+  --color-info-dark-foreground: #4a7088;
+  --color-info-inverse: #f7f0e0;
+  --color-overlay: #24201cc7;
+  --color-shadow: #0006;
+  --color-hover: #c8b8980d;
+  --color-tooltip-bg: #2e2924f5;
+  --color-tooltip-text: #e0d4be;
+  --color-voice-purple: #8a7ab0;
+  --color-voice-purple-dark: #6a5a90;
+  --color-voice-purple-light: #8a7ab0;
+  --color-voice-red: #d45040;
+  --color-voice-red-dark: #a83a2e;
+  --color-voice-amber: #c49030;
+  --color-voice-purple-glow: #8a7ab059;
+  --color-voice-red-glow: #d4504059;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 3px #0000004d;
+  --shadow-md: 0 4px 14px #0006;
+  --color-success-bg-solid: #384028;
+  --color-error-bg-solid: #4a2a26;
+  --color-error-border-solid: #52302a;
+  --color-warning-bg-solid: #4a3a20;
+  --color-warning-text: #c49030;
+  --color-info-bg-solid: #2e3a48;
+  --color-info-bg-solid-alt: #2e3a48;
+  --color-info-text: #6a90a8;
+  --color-info-text-alt: #6a90a8;
+  --color-emerald: #8a9a30;
+  --color-teal: #6a90a8;
+  --color-code-bg: #2a2520;
+  --color-code-header-bg: #38322c;
+  --color-code-text: #e0d4be;
+  --color-code-border: #433c35;
+  --color-code-muted: #7d6e5e;
+  --color-inline-code-bg: #2a2520;
+  --color-inline-code-text: #e0d4be;
+  --color-inline-code-border: #433c35;
+  --color-scrollbar-thumb: #5c524a;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #e0d4be;
+  --color-graph-node-text-dim: #7d6e5e;
+  --color-graph-edge-default: #5c4a3a;
+  --color-graph-edge-cross: #cb4b16;
+  --color-graph-edge-text: #bfb09a;
+  --color-graph-edge-stroke: #24201c;
+  --color-graph-highlight-bg: #d45040;
+  --color-graph-highlight-border: #a83a2e;
+  --color-graph-search-bg: #c49030;
+  --color-graph-search-border: #aa7e28;
+  --color-graph-focus-border: #d45040;
+  --color-graph-external-border: #5c4a3a;
+  --color-graph-cat-file: #6a90a8;
+  --color-graph-cat-folder: #8a7a68;
+  --color-graph-cat-file-aggregate: #4a7088;
+  --color-graph-cat-class: #8a7ab0;
+  --color-graph-cat-function: #8a9a30;
+  --color-graph-cat-method: #c48a4a;
+  --color-graph-cat-variable: #c49030;
+  --color-graph-cat-import: #cb4b16;
+  --color-graph-cat-module: #8a7ab0;
+  --color-graph-cat-concept: #d45040;
+  --color-graph-cat-person: #c06088;
+  --color-graph-cat-org: #c48a4a;
+  --color-graph-cat-organization: #c48a4a;
+  --color-graph-cat-product: #8a7ab0;
+  --color-graph-cat-metric: #c06088;
+  --color-graph-cat-location: #6b5d4e;
+  --color-graph-cat-date: #c06088;
+  --color-graph-cat-code: #6a90a8;
+  --color-graph-cat-doc: #8a7a68;
+  --color-graph-cat-url: #c48a4a;
+  --color-graph-cat-email: #8a7ab0;
+  --color-graph-cat-unknown: #5c4a3a;
+  --color-graph-rel-contains: #5c4a3a;
+  --color-graph-rel-extends: #8a7ab0;
+  --color-graph-rel-implements: #6a90a8;
+  --color-graph-rel-imports: #cb4b16;
+  --color-graph-rel-uses: #8a9a30;
+  --color-graph-rel-calls: #8a9a30;
+  --color-graph-rel-references: #c49030;
+  --color-graph-rel-related-to: #5c4a3a;
+  --color-graph-rel-works-on: #d45040;
+  --color-graph-rel-owns: #c48a4a;
+  --color-graph-rel-depends-on: #cb4b16;
+  --color-graph-rel-parent-of: #5c4a3a;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #7d6e5e;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #38322c;
+  --qs-tertiary-background: #38322c;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: dark;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/highcharts@12.1.2/highcharts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/highcharts@12.1.2/highcharts-more.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/highcharts@12.1.2/modules/heatmap.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/highcharts@12.1.2/modules/exporting.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/highcharts@12.1.2/modules/export-data.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/highcharts@12.1.2/modules/accessibility.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root{--gs-font:'Space Grotesk',var(--font-sans,sans-serif);--gs-mono:'JetBrains Mono',var(--font-mono,monospace);--gs-bg:var(--color-bg,#0E1117);--gs-surface:var(--color-bg-secondary,#161A22);--gs-border:var(--color-border-light,#2A2E36);--gs-text:var(--color-text,#E8EAED);--gs-text2:var(--color-text-secondary,#9AA0A6);--gs-muted:var(--color-text-muted,#6B7280);--gs-primary:var(--color-primary,#22D3EE);--gs-success:var(--color-success,#C6FF00);--gs-error:var(--color-error,#FF4D4D);--gs-warning:var(--color-warning,#FFB830);--gs-info:var(--color-info,#7B2FF7);--gs-radius:var(--radius-md,10px)}
+*{box-sizing:border-box;margin:0}
+body{background:var(--gs-bg);color:var(--gs-text);font-family:var(--gs-font);padding:clamp(16px,3vw,32px);line-height:1.5}
+.hdr{display:flex;align-items:flex-end;gap:16px;margin-bottom:clamp(20px,4vw,36px);border-bottom:2px solid var(--gs-border);padding-bottom:16px}
+.hdr-icon{font-size:36px;line-height:1}
+.hdr h1{font-size:clamp(22px,3.5vw,32px);font-weight:700;letter-spacing:-.02em;line-height:1.1}
+.hdr p{font-size:13px;color:var(--gs-muted);margin-top:2px}
+.hdr-badge{margin-left:auto;display:flex;gap:8px}
+.hdr-badge span{font-size:11px;padding:4px 12px;border-radius:20px;font-weight:600;letter-spacing:.03em;border:1px solid var(--gs-border);color:var(--gs-text2)}
+.kpi-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,2vw,16px);margin-bottom:clamp(20px,4vw,32px)}
+.kpi-tile{background:var(--gs-surface);border:1px solid var(--gs-border);border-radius:var(--gs-radius);padding:clamp(14px,2vw,20px);position:relative;overflow:hidden}
+.kpi-tile::after{content:'';position:absolute;top:0;left:0;width:4px;height:100%;border-radius:4px 0 0 4px}
+.kpi-tile:nth-child(1)::after{background:var(--gs-primary)}.kpi-tile:nth-child(2)::after{background:var(--gs-success)}.kpi-tile:nth-child(3)::after{background:var(--gs-error)}.kpi-tile:nth-child(4)::after{background:var(--gs-warning)}
+.kpi-label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--gs-muted);margin-bottom:6px}
+.kpi-num{font-size:clamp(26px,4vw,36px);font-weight:700;font-family:var(--gs-mono)}
+.kpi-sub{font-size:11px;color:var(--gs-text2);margin-top:4px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,2vw,16px);margin-bottom:clamp(12px,2vw,16px)}
+.panel{background:var(--gs-surface);border:1px solid var(--gs-border);border-radius:var(--gs-radius);padding:clamp(14px,2vw,20px);min-height:0}
+.panel.span{grid-column:1/-1}
+.chart-box{height:340px}.chart-box.short{height:280px}.chart-box.tall{height:400px}
+.sec-div{margin:clamp(28px,5vw,48px) 0 clamp(16px,3vw,24px);display:flex;align-items:center;gap:12px}
+.sec-div::after{content:'';flex:1;height:1px;background:var(--gs-border)}
+.sec-icon{font-size:28px}.sec-div h2{font-size:clamp(18px,3vw,24px);font-weight:700;letter-spacing:-.01em}
+.sec-badge{font-size:10px;padding:3px 10px;border-radius:20px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.tab-row{display:flex;gap:4px;margin-bottom:12px}
+.tab{padding:5px 14px;border-radius:20px;border:1px solid var(--gs-border);background:transparent;color:var(--gs-text2);font-size:12px;cursor:pointer;font-family:var(--gs-font);transition:all .15s}
+.tab:hover{background:color-mix(in srgb,var(--gs-primary) 10%,transparent)}.tab.on{background:var(--gs-primary);color:#000;border-color:var(--gs-primary);font-weight:600}
+.lb-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:16px}
+.lb-tile{background:var(--gs-surface);border:1px solid var(--gs-border);border-radius:var(--gs-radius);padding:12px;text-align:center;transition:transform .15s}
+.lb-tile:hover{transform:translateY(-3px)}
+.lb-tile.g{border-color:#d97706;box-shadow:inset 0 0 12px color-mix(in srgb,#d97706 15%,transparent)}
+.lb-tile.s{border-color:#9ca3af;box-shadow:inset 0 0 12px color-mix(in srgb,#9ca3af 12%,transparent)}
+.lb-tile.b{border-color:#b45309;box-shadow:inset 0 0 12px color-mix(in srgb,#b45309 12%,transparent)}
+.lb-tile.av{border-color:var(--gs-info);box-shadow:inset 0 0 12px color-mix(in srgb,var(--gs-info) 15%,transparent)}
+.lb-pos{font-size:22px;margin-bottom:2px}.lb-name{font-size:13px;font-weight:700;margin-bottom:1px}
+.lb-val{font-size:22px;font-weight:700;font-family:var(--gs-mono);color:var(--gs-success)}
+.lb-meta{font-size:10px;color:var(--gs-muted);margin-top:4px;line-height:1.5}
+.lb-tag{font-size:9px;padding:2px 8px;border-radius:12px;font-weight:600;display:inline-block;margin-top:4px}
+.av-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:16px}
+.av-card{background:var(--gs-surface);border:1px solid var(--gs-border);border-radius:var(--gs-radius);padding:12px;text-align:center;position:relative}
+.av-card.best{border-color:var(--gs-success);box-shadow:inset 0 0 14px color-mix(in srgb,var(--gs-success) 12%,transparent)}
+.av-crown{position:absolute;top:-10px;right:-4px;font-size:16px}
+.aname{font-size:12px;font-weight:600;margin-bottom:4px}
+.acount{font-size:24px;font-weight:700;font-family:var(--gs-mono)}
+.arank{font-size:10px;color:var(--gs-muted);margin-top:2px}
+.mr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:18px}
+.mr-card{background:var(--gs-surface);border:1px solid var(--gs-border);border-radius:var(--gs-radius);padding:14px;position:relative;overflow:hidden}
+.mr-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.mr-card.jul::before{background:var(--gs-primary)}.mr-card.aug::before{background:var(--gs-error)}.mr-card.sep::before{background:var(--gs-warning)}
+.mr-title{font-size:14px;font-weight:700;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
+.mr-tag{font-size:10px;padding:2px 8px;border-radius:12px;font-weight:600;color:#000}
+.mr-stats{font-size:12px;color:var(--gs-text2);line-height:1.8}.mr-stats b{color:var(--gs-text);font-family:var(--gs-mono)}
+.mr-podium{margin-top:10px;padding-top:10px;border-top:1px solid var(--gs-border)}
+.mr-pt{font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--gs-muted);margin-bottom:6px}
+.pod{display:flex;align-items:center;gap:6px;font-size:12px;padding:2px 0}
+.pod-m{width:18px;text-align:center;font-size:13px}.pod-n{font-weight:600;flex:1}
+.pod-v{font-family:var(--gs-mono);color:var(--gs-text2);font-size:11px}
+@media(max-width:700px){.kpi-strip,.grid{grid-template-columns:1fr}.lb-grid{grid-template-columns:repeat(2,1fr)}.av-grid{grid-template-columns:repeat(3,1fr)}.mr-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="hdr"><span class="hdr-icon">📊</span><div><h1>INF Error Analytics</h1><p>DTC Mapping Operations · July — September 2026 · 58 mappers · 2,401 errors</p></div><div class="hdr-badge"><span><i class="fa-solid fa-chart-line"></i> Graphify</span><span><i class="fa-solid fa-wand-magic-sparkles"></i> Interactive</span></div></div>
+
+<div class="kpi-strip">
+  <div class="kpi-tile"><div class="kpi-label">Total Errors</div><div class="kpi-num" id="k1">0</div><div class="kpi-sub">Across 3 months</div></div>
+  <div class="kpi-tile"><div class="kpi-label">Accepted</div><div class="kpi-num" id="k2">0</div><div class="kpi-sub">Validated &amp; confirmed</div></div>
+  <div class="kpi-tile"><div class="kpi-label">Rejected</div><div class="kpi-num" id="k3">0</div><div class="kpi-sub">Disputed by mappers</div></div>
+  <div class="kpi-tile"><div class="kpi-label">Pending</div><div class="kpi-num" id="k4">0</div><div class="kpi-sub">Awaiting validation</div></div>
+</div>
+
+<div class="grid">
+  <div class="panel span"><div class="tab-row" id="tt"><button class="tab on" data-v="m">Monthly</button><button class="tab" data-v="w">Weekly</button></div><div id="c1" class="chart-box"></div></div>
+  <div class="panel"><div id="c2" class="chart-box"></div></div>
+  <div class="panel"><div id="c3" class="chart-box"></div></div>
+  <div class="panel"><div id="c4" class="chart-box"></div></div>
+  <div class="panel"><div id="c5" class="chart-box"></div></div>
+  <div class="panel span"><div id="hm1" class="chart-box tall"></div></div>
+  <div class="panel"><div id="c6" class="chart-box short"></div></div>
+  <div class="panel"><div id="c7" class="chart-box short"></div></div>
+</div>
+
+<div class="sec-div"><span class="sec-icon">🏆</span><h2>Top 10 Best Performers</h2><span class="sec-badge" style="background:#d97706;color:#000">LEADERBOARD</span></div>
+<div class="lb-grid">
+  <div class="lb-tile g"><div class="lb-pos">🥇</div><div class="lb-name">priyavt</div><div class="lb-val">1</div><div class="lb-meta">J:0 A:1 S:0 · 100%</div></div>
+  <div class="lb-tile s"><div class="lb-pos">🥈</div><div class="lb-name">ankitrm</div><div class="lb-val">3</div><div class="lb-meta">J:0 A:0 S:3 · Pending</div></div>
+  <div class="lb-tile b av"><div class="lb-pos">🥉</div><div class="lb-name">alexm92</div><div class="lb-val">5</div><div class="lb-meta">J:2 A:3 S:0 · 100%</div><div class="lb-tag" style="background:var(--gs-info);color:#fff">DTC Avenger</div></div>
+  <div class="lb-tile"><div class="lb-pos">4️⃣</div><div class="lb-name">divyash</div><div class="lb-val">6</div><div class="lb-meta">J:0 A:3 S:3 · 100%</div></div>
+  <div class="lb-tile"><div class="lb-pos">5️⃣</div><div class="lb-name">snehalp</div><div class="lb-val">7</div><div class="lb-meta">J:0 A:3 S:4 · 100%</div></div>
+</div>
+<div class="lb-grid">
+  <div class="lb-tile"><div class="lb-pos">6️⃣</div><div class="lb-name">vikasbn</div><div class="lb-val">8</div><div class="lb-meta">J:0 A:8 S:0 · 100%</div></div>
+  <div class="lb-tile"><div class="lb-pos">7️⃣</div><div class="lb-name">tarunml</div><div class="lb-val">8</div><div class="lb-meta">J:0 A:5 S:3 · 20%</div></div>
+  <div class="lb-tile"><div class="lb-pos">8️⃣</div><div class="lb-name">faizanq</div><div class="lb-val">10</div><div class="lb-meta">J:0 A:6 S:4 · Pending</div></div>
+  <div class="lb-tile"><div class="lb-pos">9️⃣</div><div class="lb-name">shreyajk</div><div class="lb-val">10</div><div class="lb-meta">J:5 A:2 S:3 · 100%</div></div>
+  <div class="lb-tile"><div class="lb-pos">🔟</div><div class="lb-name">amitdv</div><div class="lb-val">10</div><div class="lb-meta">J:0 A:7 S:3 · 57%</div></div>
+</div>
+<div class="grid"><div class="panel span"><div id="lb1" class="chart-box short"></div></div></div>
+
+<div class="sec-div"><span class="sec-icon">🛡️</span><h2>DTC Avengers</h2><span class="sec-badge" style="background:var(--gs-info);color:#fff">SQUAD</span></div>
+<div class="av-grid">
+  <div class="av-card best"><span class="av-crown">👑</span><div class="aname">alexm92</div><div class="acount" style="color:var(--gs-success)">5</div><div class="arank">#1 Squad · #3 Team · 100%</div></div>
+  <div class="av-card"><div class="aname">meghank</div><div class="acount" style="color:var(--gs-success)">14</div><div class="arank">#2 Squad · #19 Team · 91%</div></div>
+  <div class="av-card"><div class="aname">ritapv</div><div class="acount" style="color:var(--gs-success)">17</div><div class="arank">#3 Squad · #24 Team · 100%</div></div>
+  <div class="av-card"><div class="aname">rohans</div><div class="acount" style="color:var(--gs-success)">17</div><div class="arank">#4 Squad · #25 Team · 100%</div></div>
+  <div class="av-card"><div class="aname">deepakrj</div><div class="acount" style="color:var(--gs-warning)">20</div><div class="arank">#5 Squad · #29 Team · 50%</div></div>
+  <div class="av-card"><div class="aname">kartiksd</div><div class="acount" style="color:var(--gs-warning)">22</div><div class="arank">#6 Squad · #30 Team · 77%</div></div>
+</div>
+
+<div class="mr-grid">
+  <div class="mr-card jul"><div class="mr-title">July 2026 <span class="mr-tag" style="background:var(--gs-primary)">10 errors</span></div><div class="mr-stats">Team: <b>283</b> · Avg: <b>17.7</b><br>Squad: <b>10</b> · Avg: <b>2.5</b><br><span style="color:var(--gs-success)"><b>86% below</b> team avg</span></div><div class="mr-podium"><div class="mr-pt">🏆 Rankings (0 = best)</div><div class="pod"><span class="pod-m">🥇</span><span class="pod-n">deepakrj</span><span class="pod-v">0 ⭐</span></div><div class="pod"><span class="pod-m">🥇</span><span class="pod-n">ritapv</span><span class="pod-v">0 ⭐</span></div><div class="pod"><span class="pod-m">🥉</span><span class="pod-n">rohans</span><span class="pod-v">1</span></div><div class="pod"><span class="pod-m">4</span><span class="pod-n">alexm92</span><span class="pod-v">2</span></div><div class="pod"><span class="pod-m">4</span><span class="pod-n">meghank</span><span class="pod-v">2</span></div><div class="pod"><span class="pod-m">6</span><span class="pod-n">kartiksd</span><span class="pod-v">5</span></div></div></div>
+  <div class="mr-card aug"><div class="mr-title">August 2026 <span class="mr-tag" style="background:var(--gs-error)">66 errors</span></div><div class="mr-stats">Team: <b>1,350</b> · Avg: <b>24.1</b><br>Squad: <b>66</b> · Avg: <b>11.0</b><br><span style="color:var(--gs-success)"><b>54% below</b> team avg</span></div><div class="mr-podium"><div class="mr-pt">🏆 Rankings</div><div class="pod"><span class="pod-m">🥇</span><span class="pod-n">alexm92</span><span class="pod-v">3</span></div><div class="pod"><span class="pod-m">🥈</span><span class="pod-n">kartiksd</span><span class="pod-v">8</span></div><div class="pod"><span class="pod-m">🥉</span><span class="pod-n">meghank</span><span class="pod-v">9</span></div><div class="pod"><span class="pod-m">4</span><span class="pod-n">ritapv</span><span class="pod-v">14</span></div><div class="pod"><span class="pod-m">4</span><span class="pod-n">rohans</span><span class="pod-v">14</span></div><div class="pod"><span class="pod-m">6</span><span class="pod-n">deepakrj</span><span class="pod-v">18</span></div></div></div>
+  <div class="mr-card sep"><div class="mr-title">September 2026 <span class="mr-tag" style="background:var(--gs-warning)">19 errors</span></div><div class="mr-stats">Team: <b>768</b> · Avg: <b>15.1</b><br>Squad: <b>19</b> · Avg: <b>3.8</b><br><span style="color:var(--gs-success)"><b>75% below</b> team avg</span></div><div class="mr-podium"><div class="mr-pt">🏆 Rankings</div><div class="pod"><span class="pod-m">🥇</span><span class="pod-n">alexm92</span><span class="pod-v">0 ⭐</span></div><div class="pod"><span class="pod-m">🥈</span><span class="pod-n">deepakrj</span><span class="pod-v">2</span></div><div class="pod"><span class="pod-m">🥈</span><span class="pod-n">rohans</span><span class="pod-v">2</span></div><div class="pod"><span class="pod-m">4</span><span class="pod-n">meghank</span><span class="pod-v">3</span></div><div class="pod"><span class="pod-m">4</span><span class="pod-n">ritapv</span><span class="pod-v">3</span></div><div class="pod"><span class="pod-m">6</span><span class="pod-n">kartiksd</span><span class="pod-v">9</span></div></div></div>
+</div>
+
+<div class="grid">
+  <div class="panel span"><div id="av1" class="chart-box short"></div></div>
+  <div class="panel"><div id="av2" class="chart-box"></div></div>
+  <div class="panel"><div id="av3" class="chart-box"></div></div>
+  <div class="panel"><div id="av4" class="chart-box"></div></div>
+  <div class="panel"><div id="av5" class="chart-box"></div></div>
+</div>
+
+<script>
+const s=getComputedStyle(document.documentElement),get=(v,fb)=>(s.getPropertyValue(v).trim()||fb);
+const textColor=get('--color-text','#E8EAED'),textMuted=get('--color-text-muted','#9AA0A6'),gridColor=get('--color-border-light','#2A2E36'),surface=get('--color-surface','#161A22'),border=get('--color-border','#2A2E36'),primary=get('--color-primary','#22D3EE'),success=get('--color-success','#C6FF00'),error=get('--color-error','#FF4D4D'),warning=get('--color-warning','#FFB830'),info=get('--color-info','#7B2FF7');
+const gsFont=get('--font-sans',"'Space Grotesk',sans-serif");
+const cO={backgroundColor:'transparent',style:{fontFamily:gsFont},animation:{duration:800}};
+const cT={backgroundColor:surface,borderColor:border,style:{color:textColor,fontSize:'12px'},shadow:false,shared:true};
+const cL={itemStyle:{color:textColor,fontSize:'11px'},itemHoverStyle:{color:textColor}};
+const cA={labels:{style:{color:textColor,fontSize:'11px'}},lineColor:gridColor,gridLineColor:gridColor,crosshair:true};
+const cE={buttons:{contextButton:{theme:{fill:surface}}}};
+
+function anim(id,t){const el=document.getElementById(id);let c=0;const st=Math.ceil(t/40);const iv=setInterval(()=>{c=Math.min(c+st,t);el.textContent=c.toLocaleString();if(c>=t)clearInterval(iv)},25);}
+anim('k1',2401);anim('k2',1309);anim('k3',288);anim('k4',294);
+
+// MAIN CHARTS
+let tc1;
+function rMT(){if(tc1)tc1.destroy();tc1=Highcharts.chart('c1',{chart:{type:'column',...cO,zoomType:'y'},title:{text:null},xAxis:{...cA,categories:['July','August','September']},yAxis:{...cA,title:null},tooltip:{...cT,pointFormat:'<b>{point.y:,.0f}</b> errors'},plotOptions:{column:{borderRadius:6,colorByPoint:true,borderWidth:0,dataLabels:{enabled:true,style:{color:textColor,fontWeight:'700',fontSize:'14px',textOutline:'none'}}}},colors:[primary,error,warning],series:[{name:'Errors',data:[283,1350,768],showInLegend:false}],exporting:cE,credits:{enabled:false}});}
+function rWT(){if(tc1)tc1.destroy();tc1=Highcharts.chart('c1',{chart:{type:'areaspline',...cO,zoomType:'x'},title:{text:null},xAxis:{...cA,categories:[27,28,29,30,32,33,34,35,36,37,38].map(w=>'W'+w)},yAxis:{...cA,title:null},tooltip:cT,plotOptions:{areaspline:{fillOpacity:.08,marker:{radius:4},lineWidth:3}},colors:[primary,error,warning],series:[{name:'Jul',data:[141,61,49,32,0,0,0,0,0,0,0]},{name:'Aug',data:[0,0,0,0,280,244,315,240,209,62,0]},{name:'Sep',data:[0,0,0,0,0,0,0,0,0,352,416]}],legend:cL,exporting:cE,credits:{enabled:false}});}
+rMT();
+document.querySelectorAll('#tt .tab').forEach(b=>{b.addEventListener('click',()=>{document.querySelectorAll('#tt .tab').forEach(x=>x.classList.remove('on'));b.classList.add('on');b.dataset.v==='m'?rMT():rWT();});});
+
+Highcharts.chart('c2',{chart:{type:'bar',...cO,zoomType:'x'},title:{text:'Issue Category by Month',style:{color:textColor,fontWeight:'600',fontSize:'14px'}},xAxis:{...cA,categories:['Jul','Aug','Sep']},yAxis:{...cA,title:null},tooltip:cT,plotOptions:{bar:{stacking:'normal',borderRadius:4,borderWidth:0}},colors:[error,warning,info],series:[{name:'Skipped Suggestion',data:[71,1104,704]},{name:'Missed Mandatory',data:[209,233,55]},{name:'Mapper Oversight',data:[2,12,9]}],legend:cL,exporting:cE,credits:{enabled:false}});
+
+Highcharts.chart('c3',{chart:{type:'pie',...cO},title:{text:'Error Split',style:{color:textColor,fontWeight:'600',fontSize:'14px'}},tooltip:{...cT,pointFormat:'<b>{point.y:,.0f}</b> ({point.percentage:.1f}%)'},plotOptions:{pie:{innerSize:'58%',allowPointSelect:true,cursor:'pointer',borderWidth:0,dataLabels:{enabled:true,format:'{point.name}: {point.percentage:.0f}%',style:{color:textMuted,fontSize:'11px',textOutline:'none'}}}},colors:[error,warning,info],series:[{data:[{name:'Skipped Suggestion',y:1880},{name:'Missed Mandatory',y:497},{name:'Mapper Oversight',y:23}]}],exporting:cE,credits:{enabled:false}});
+
+Highcharts.chart('c4',{chart:{type:'bar',...cO,zoomType:'x'},title:{text:'10 Most Errors (worst)',style:{color:textColor,fontWeight:'600',fontSize:'14px'}},xAxis:{...cA,categories:["rajeshmk","sunilpd","kavitars","manojbt","poojask","sandyvm","gauravkl","nitinrp","swatijr","arundhk"]},yAxis:{...cA,title:null},tooltip:{...cT,shared:false,pointFormat:'<b>{point.y}</b> errors'},plotOptions:{bar:{borderRadius:4,borderWidth:0,dataLabels:{enabled:true,style:{color:textMuted,fontSize:'10px',textOutline:'none'}},color:error}},series:[{data:[404,199,165,115,95,79,77,77,72,66],showInLegend:false}],exporting:cE,credits:{enabled:false}});
+
+Highcharts.chart('c5',{chart:{type:'bar',...cO,zoomType:'x'},title:{text:'Top 10 Competitors',style:{color:textColor,fontWeight:'600',fontSize:'14px'}},xAxis:{...cA,categories:["Routledge","headlightsdepot","Affyjewelry","BlackForestDecor","Foco","ClearBags","Totalpowerparts","Daywind","JacobsTrading","Aruba"]},yAxis:{...cA,title:null},plotOptions:{bar:{borderRadius:4,borderWidth:0,dataLabels:{enabled:true,style:{color:textMuted,fontSize:'10px',textOutline:'none'}},color:info}},series:[{data:[202,126,101,99,64,59,55,48,47,47],showInLegend:false}],exporting:cE,credits:{enabled:false}});
+
+// ===== IMPROVED HEATMAP — High contrast color scale =====
+Highcharts.chart('hm1',{
+  chart:{type:'heatmap',...cO},
+  title:{text:'Error Intensity — Top 15 Mappers × Month',style:{color:textColor,fontWeight:'600',fontSize:'14px'}},
+  subtitle:{text:'Hover for details · Brighter = more errors',style:{color:textMuted,fontSize:'11px'}},
+  xAxis:{categories:['July','August','September'],labels:{style:{color:textColor,fontSize:'12px',fontWeight:'600'}},lineWidth:0},
+  yAxis:{categories:["rajeshmk","sunilpd","kavitars","manojbt","poojask","sandyvm","gauravkl","nitinrp","swatijr","arundhk","reenasg","harshpn","tanvidl","omkarjt","latikamv"],
+    labels:{style:{color:textColor,fontSize:'11px'}},title:null,reversed:true,gridLineWidth:0},
+  colorAxis:{
+    min:0,max:210,
+    stops:[
+      [0,   '#1a1e2e'],
+      [0.001,'#0d4f3c'],
+      [0.10, '#15803d'],
+      [0.25, '#a3e635'],
+      [0.45, '#facc15'],
+      [0.65, '#f97316'],
+      [0.85, '#ef4444'],
+      [1,    '#dc2626']
+    ],
+    labels:{style:{color:textMuted,fontSize:'11px'}}
+  },
+  tooltip:{
+    ...cT,shared:false,
+    formatter:function(){
+      const mapper=this.series.yAxis.categories[this.point.y];
+      const month=this.series.xAxis.categories[this.point.x];
+      const v=this.point.value;
+      const bar='█'.repeat(Math.min(Math.ceil(v/10),20));
+      return '<span style="font-weight:700;font-size:13px">'+mapper+'</span><br>'+
+             '<span style="color:'+textMuted+'">'+month+':</span> <b style="font-size:14px">'+v+'</b> errors<br>'+
+             '<span style="color:#facc15;letter-spacing:1px">'+bar+'</span>';
+    }
+  },
+  series:[{
+    name:'Errors',
+    data:[[0,0,21],[1,0,204],[2,0,179],[0,1,0],[1,1,33],[2,1,166],[0,2,0],[1,2,133],[2,2,32],[0,3,15],[1,3,93],[2,3,7],[0,4,95],[1,4,0],[2,4,0],[0,5,23],[1,5,19],[2,5,37],[0,6,36],[1,6,26],[2,6,15],[0,7,0],[1,7,63],[2,7,14],[0,8,0],[1,8,50],[2,8,22],[0,9,0],[1,9,41],[2,9,25],[0,10,0],[1,10,43],[2,10,15],[0,11,0],[1,11,42],[2,11,12],[0,12,15],[1,12,27],[2,12,7],[0,13,0],[1,13,37],[2,13,12],[0,14,0],[1,14,34],[2,14,13]],
+    borderWidth:3,borderColor:surface,
+    dataLabels:{
+      enabled:true,
+      formatter:function(){return this.point.value===0?'–':this.point.value;},
+      style:{color:'#fff',fontSize:'11px',fontWeight:'700',textOutline:'1px solid rgba(0,0,0,0.5)'}
+    }
+  }],
+  legend:{align:'right',verticalAlign:'top',layout:'vertical',symbolHeight:220,width:60,
+    itemStyle:{color:textMuted,fontSize:'10px'},
+    title:{text:'Errors',style:{color:textMuted,fontSize:'10px'}}},
+  exporting:cE,credits:{enabled:false}
+});
+
+Highcharts.chart('c6',{chart:{type:'column',...cO},title:{text:'Validation Status',style:{color:textColor,fontWeight:'600',fontSize:'14px'}},xAxis:{...cA,categories:['Jul','Aug','Sep']},yAxis:{...cA,title:null},tooltip:cT,plotOptions:{column:{stacking:'normal',borderRadius:3,borderWidth:0}},series:[{name:'Accepted',data:[254,1055,0],color:success},{name:'Rejected',data:[21,267,0],color:error},{name:'Pending',data:[0,26,268],color:warning},{name:'Untagged',data:[8,1,500],color:'#6B7280'}],legend:cL,exporting:cE,credits:{enabled:false}});
+
+Highcharts.chart('c7',{chart:{type:'column',...cO},title:{text:'Remap Status',style:{color:textColor,fontWeight:'600',fontSize:'14px'}},xAxis:{...cA,categories:['Jul','Aug','Sep']},yAxis:{...cA,title:null},tooltip:cT,plotOptions:{column:{stacking:'normal',borderRadius:3,borderWidth:0}},series:[{name:'Yes',data:[250,1061,5],color:success},{name:'No',data:[10,119,0],color:error},{name:'Other',data:[1,11,121],color:warning},{name:'Not Done',data:[22,159,642],color:'#6B7280'}],legend:cL,exporting:cE,credits:{enabled:false}});
+
+// LEADERBOARD
+Highcharts.chart('lb1',{chart:{type:'bar',...cO,zoomType:'x'},title:{text:'Top 10 Best Performers — Fewest Errors',style:{color:textColor,fontWeight:'600',fontSize:'14px'}},xAxis:{...cA,categories:['priyavt','ankitrm','alexm92','divyash','snehalp','vikasbn','tarunml','faizanq','shreyajk','amitdv']},yAxis:{...cA,title:null,plotLines:[{value:41.4,color:error,dashStyle:'Dash',width:2,zIndex:5,label:{text:'Team avg: 41.4',style:{color:error,fontSize:'11px',fontWeight:'600'}}}]},tooltip:{...cT,shared:false,pointFormat:'<b>{point.y}</b> errors'},plotOptions:{bar:{borderRadius:5,borderWidth:0,colorByPoint:true,dataLabels:{enabled:true,format:'#{point.rk} · {y} errors',style:{color:textColor,fontWeight:'600',fontSize:'11px',textOutline:'none'}}}},colors:['#d97706','#9ca3af',info,'#6366f1','#06b6d4','#10b981','#ec4899','#f97316','#3b82f6','#14b8a6'],series:[{data:[{y:1,rk:1},{y:3,rk:2},{y:5,rk:3,color:info},{y:6,rk:4},{y:7,rk:5},{y:8,rk:6},{y:8,rk:7},{y:10,rk:8},{y:10,rk:9},{y:10,rk:10}],showInLegend:false}],exporting:cE,credits:{enabled:false}});
+
+// AVENGERS
+const ac=[primary,'#06b6d4',success,'#ec4899',warning,error];
+const avm=['alexm92','meghank','ritapv','rohans','deepakrj','kartiksd'];
+
+Highcharts.chart('av1',{chart:{type:'column',...cO,zoomType:'y'},title:{text:'DTC Avengers vs Team (fewer = better)',style:{color:textColor,fontWeight:'600',fontSize:'14px'}},subtitle:{text:'Squad avg: 15.8 vs Team avg: 41.4 — 62% fewer 🎯',style:{color:textMuted,fontSize:'11px'}},xAxis:{...cA,categories:avm},yAxis:{...cA,title:null,plotLines:[{value:41.4,color:error,dashStyle:'Dash',width:2,zIndex:5,label:{text:'Team avg: 41.4',style:{color:error,fontSize:'11px',fontWeight:'600'}}},{value:15.8,color:primary,dashStyle:'Dash',width:2,zIndex:5,label:{text:'Squad: 15.8',style:{color:primary,fontSize:'11px',fontWeight:'600'}}}]},tooltip:{...cT,shared:false,pointFormat:'<b>{point.y}</b> errors'},plotOptions:{column:{borderRadius:6,borderWidth:0,colorByPoint:true,dataLabels:{enabled:true,style:{color:textColor,fontWeight:'700',fontSize:'13px',textOutline:'none'}}}},colors:ac,series:[{data:[5,14,17,17,20,22],showInLegend:false}],exporting:cE,credits:{enabled:false}});
+
+Highcharts.chart('av2',{chart:{type:'column',...cO,zoomType:'xy'},title:{text:'Monthly Trend',style:{color:textColor,fontWeight:'600',fontSize:'14px'}},xAxis:{...cA,categories:['Jul','Aug','Sep']},yAxis:{...cA,title:null},tooltip:cT,plotOptions:{column:{borderRadius:3,borderWidth:0}},colors:ac,series:[{name:'alexm92',data:[2,3,0]},{name:'meghank',data:[2,9,3]},{name:'ritapv',data:[0,14,3]},{name:'rohans',data:[1,14,2]},{name:'deepakrj',data:[0,18,2]},{name:'kartiksd',data:[5,8,9]}],legend:cL,exporting:cE,credits:{enabled:false}});
+
+Highcharts.chart('av3',{chart:{polar:true,type:'line',...cO},title:{text:'Performance Radar',style:{color:textColor,fontWeight:'600',fontSize:'14px'}},pane:{size:'85%'},xAxis:{categories:['Accuracy','Error Score','Consistency','Remap Rate','Category Focus'],tickmarkPlacement:'on',lineWidth:0,labels:{style:{color:textMuted,fontSize:'10px'}}},yAxis:{gridLineInterpolation:'polygon',lineWidth:0,min:0,max:100,labels:{style:{color:textMuted}},gridLineColor:gridColor},tooltip:{...cT,shared:true,pointFormat:'{series.name}: <b>{point.y}</b>/100<br>'},plotOptions:{line:{lineWidth:2,marker:{radius:3}}},colors:ac,series:[{name:'alexm92',data:[100,80,93,100,60]},{name:'meghank',data:[91,44,62,71,29]},{name:'ritapv',data:[100,32,22,71,35]},{name:'rohans',data:[100,32,28,88,12]},{name:'deepakrj',data:[50,20,0,40,5]},{name:'kartiksd',data:[77,12,79,45,27]}],legend:cL,exporting:cE,credits:{enabled:false}});
+
+Highcharts.chart('av4',{chart:{type:'bar',...cO},title:{text:'Error Categories',style:{color:textColor,fontWeight:'600',fontSize:'14px'}},xAxis:{...cA,categories:avm},yAxis:{...cA,title:null},tooltip:cT,plotOptions:{bar:{stacking:'normal',borderRadius:3,borderWidth:0}},colors:[error,warning],series:[{name:'Skipped Suggestion',data:[2,10,11,15,19,16]},{name:'Missed Mandatory',data:[3,4,6,2,1,6]}],legend:cL,exporting:cE,credits:{enabled:false}});
+
+Highcharts.chart('av5',{chart:{type:'column',...cO},title:{text:'Acceptance Rate %',style:{color:textColor,fontWeight:'600',fontSize:'14px'}},xAxis:{...cA,categories:avm},yAxis:{...cA,max:100,title:null,plotLines:[{value:80,color:success,dashStyle:'Dash',width:1,zIndex:5}]},tooltip:{...cT,shared:false,pointFormat:'<b>{point.y}%</b>'},plotOptions:{column:{borderRadius:6,borderWidth:0,colorByPoint:true,dataLabels:{enabled:true,format:'{y}%',style:{color:textColor,fontWeight:'700',fontSize:'13px',textOutline:'none'}}}},colors:ac,series:[{data:[100,91,100,100,50,77],showInLegend:false}],exporting:cE,credits:{enabled:false}});
+</script>
+
+</body></html>
